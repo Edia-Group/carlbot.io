@@ -23,7 +23,7 @@ import { ButtonLink, CtaButtonLink, TextLink } from "./link";
 
 const links = [
   {
-    label: "Pricing",
+    label: "Prezzi",
     to: "/pricing",
   },
   {
@@ -31,7 +31,7 @@ const links = [
     to: "/blog",
   },
   {
-    label: "Documentation",
+    label: "Documentazione",
     href: docsUrl,
   },
   {
@@ -43,7 +43,7 @@ const links = [
     href: discordUrl,
   },
   {
-    label: "About",
+    label: "Chi siamo",
     to: "/about",
   },
 ] as const;
@@ -159,7 +159,7 @@ const Mobile = React.forwardRef<HTMLElement, Props>(function Mobile(
           <LeadBotLogoFull />
         </Link>
         <Button
-          aria-label={isOpened ? "Close menu" : "Open menu"}
+          aria-label={isOpened ? "Chiudi menu" : "Apri menu"}
           variant="ghost"
           size="icon"
           onClick={toggleHeaderExpansion}
@@ -196,7 +196,7 @@ const Mobile = React.forwardRef<HTMLElement, Props>(function Mobile(
                 variant: "outline",
               })}
             >
-              Sign in
+              Accedi
             </CtaButtonLink>
           </motion.nav>
         )}
@@ -215,11 +215,11 @@ const desktopLinks = [
     href: discordUrl,
   },
   {
-    label: "Pricing",
+    label: "Prezzi",
     to: "/pricing",
   },
   {
-    label: "Documentation",
+    label: "Documentazione",
     href: docsUrl,
   },
   {
@@ -301,11 +301,11 @@ const Desktop = React.forwardRef<
         ))}
         {isAuthenticated ? (
           <CtaButtonLink size="sm" href={dashboardUrl}>
-            Go to dashboard
+            Vai alla dashboard
           </CtaButtonLink>
         ) : (
           <CtaButtonLink size="sm" href={registerUrl}>
-            Get started free
+            Inizia gratis
           </CtaButtonLink>
         )}
       </nav>
