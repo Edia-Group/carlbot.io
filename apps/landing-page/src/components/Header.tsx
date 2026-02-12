@@ -116,13 +116,13 @@ export const Header = ({ isOpened = false, onOpen, onClose }: HeaderProps) => {
         isOpened={isOpened}
         toggleHeaderExpansion={toggleHeaderExpansion}
         className="md:hidden"
-        aria-label="Mobile header navigation"
+        aria-label="Navigazione header mobile"
       />
       <Desktop
         ref={headerRef}
         appearance={appearance}
         className="hidden md:flex"
-        aria-label="Mobile header navigation"
+        aria-label="Navigazione header mobile"
       />
     </header>
   );
