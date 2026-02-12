@@ -7,7 +7,7 @@ import { cn } from "@typebot.io/ui/lib/cn";
 import { cx } from "@typebot.io/ui/lib/cva";
 import { AnimatePresence, motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
-import { TypebotLogoFull } from "@/components/TypebotLogo";
+import { LeadBotLogoFull } from "@/components/LeadBotLogo";
 import {
   breakpoints,
   dashboardUrl,
@@ -156,7 +156,7 @@ const Mobile = React.forwardRef<HTMLElement, Props>(function Mobile(
     >
       <div className="flex items-center justify-between px-4 py-2">
         <Link to="/">
-          <TypebotLogoFull />
+          <LeadBotLogoFull />
         </Link>
         <Button
           aria-label={isOpened ? "Close menu" : "Open menu"}
@@ -317,7 +317,7 @@ const Desktop = React.forwardRef<
           )}
         >
           <Bubble
-            typebot="typebot-demo"
+            typebot="Leadbot-demo"
             theme={{
               position: "static",
               chatWindow: {
