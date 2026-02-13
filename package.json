@@ -26,6 +26,7 @@
     "check-types": "turbo run check-types",
     "build": "turbo run build --filter=@leadbot/builder... --filter=viewer... --filter=landing-page... --filter=docs...",
     "dev": "node scripts/dev.js",
+    "dev:default": "turbo dev --filter=@leadbot/builder... --filter=viewer... --filter=workflows... --concurrency=11",
     "dev:windows": "turbo dev --filter=@leadbot/builder --filter=viewer --filter=landing-page --concurrency=5",
     "test": "turbo run test",
     "sync-locales": "dotenv -e .env -- tolgee sync --continue-on-warning --remove-unused --no-strict-namespace --patterns './apps/builder/src/**/*.ts?(x)' --backup './.tolgee/backup'",

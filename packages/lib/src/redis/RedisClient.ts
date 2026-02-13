@@ -1,4 +1,4 @@
-import { Context, Effect, Layer, Redacted, Schema, Stream } from "effect";
+import { Config, Context, Effect, Layer, Option, Schema, Stream } from "effect";
 import Redis from "ioredis";
 
 export class RedisConnectError extends Schema.TaggedError<RedisConnectError>()(
@@ -56,16 +56,27 @@ export class RedisClient extends Context.Tag("@typebot/RedisClient")<
 
 export const RedisClientLayer = Layer.unwrapScoped(
   Effect.gen(function* () {
-    const redisUrl = yield* Schema.Config(
-      "REDIS_URL",
-      Schema.Redacted(Schema.URL),
-    );
+    const redisUrl = yield* Config.string("REDIS_URL").pipe(Config.option);
+
+    // If Redis is not configured, provide a no-op client
+    if (Option.isNone(redisUrl)) {
+      return Layer.succeed(RedisClient, {
+        get: (key: string) => Effect.succeed(null),
+        set: (key: string, value: string) => Effect.void,
+        publish: (channel: string, message: string) => Effect.void,
+        subscribe: (channel: string) => Stream.empty,
+      });
+    }
+
+    const url = Option.getOrThrow(redisUrl);
+
     const createClient = Effect.sync(
       () =>
-        new Redis(Redacted.value(redisUrl).toString(), {
+        new Redis(url, {
           lazyConnect: true,
         }),
     );
+
     const connectClient = (redis: Redis) =>
       Effect.tryPromise({
         try: () => {
@@ -78,6 +89,7 @@ export const RedisClientLayer = Layer.unwrapScoped(
             cause: error,
           }),
       }).pipe(Effect.as(redis));
+
     const releaseClient = (redis: Redis) => Effect.promise(() => redis.quit());
 
     const client = yield* Effect.acquireRelease(
@@ -129,15 +141,13 @@ export const RedisClientLayer = Layer.unwrapScoped(
         Effect.acquireRelease(
           Effect.gen(function* () {
             const subscriber = yield* createClient.pipe(
-              Effect.flatMap((redis) =>
-                connectClient(redis).pipe(
-                  Effect.mapError(
-                    (error) =>
-                      new RedisSubscribeError({
-                        message: error.message,
-                        cause: error.cause,
-                      }),
-                  ),
+              Effect.flatMap(connectClient).pipe(
+                Effect.mapError(
+                  (error) =>
+                    new RedisSubscribeError({
+                      message: error.message,
+                      cause: error.cause,
+                    }),
                 ),
               ),
             );
@@ -166,7 +176,6 @@ export const RedisClientLayer = Layer.unwrapScoped(
                 }),
             });
 
-            // Return cleanup function (handled by acquireRelease in createSubscriber)
             return subscriber;
           }),
           releaseClient,

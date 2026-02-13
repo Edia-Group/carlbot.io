@@ -10,14 +10,13 @@ const { spawn } = require("child_process");
 const process = require("process");
 
 const isWindows = process.platform === "win32";
-const command = isWindows ? "dev:windows" : "dev";
+const command = isWindows ? "dev:windows" : "dev:default";
 
 console.log(`🖥️  Detected OS: ${process.platform}`);
 console.log(`🚀 Running: bun ${command}\n`);
 
 const child = spawn("bun", [command], {
   stdio: "inherit",
-  shell: true,
 });
 
 child.on("exit", (code) => {
