@@ -20,8 +20,9 @@ import { createMetaTags } from "@/lib/createMetaTags";
 export const Route = createFileRoute("/_layout/pricing")({
   head: () => ({
     meta: createMetaTags({
-      title: "Pricing | Typebot",
-      description: "Typebot pricing plans and features.",
+      title: "Prezzi | LeadBot",
+      description:
+        "Piani e prezzi LeadBot per professionisti e agenzie italiane. Inizia gratis, scala con il tuo business.",
       imagePath: "/images/default-og.png",
       path: "/pricing",
     }),
@@ -69,7 +70,7 @@ function RouteComponent() {
             <EnterprisePlanCard />
           </div>
           <div className="flex flex-col gap-8">
-            <h2>Compare plans & features</h2>
+            <h2>Confronta i piani e le funzionalità</h2>
             <PlanComparisonTables onChatsTiersClick={openTiersDialog} />
             <div className="flex flex-col gap-4 md:flex-row w-full justify-around">
               <FreePlanCard />

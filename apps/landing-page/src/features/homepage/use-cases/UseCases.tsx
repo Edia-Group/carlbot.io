@@ -2,9 +2,9 @@ import { cn } from "@typebot.io/ui/lib/cn";
 import { cx } from "@typebot.io/ui/lib/cva";
 import { AnimatePresence, motion, useInView } from "motion/react";
 import { useEffect, useRef, useState } from "react";
+import { LeadBotLogoFull } from "@/components/LeadBotLogo";
 import { CtaButtonLink } from "@/components/link";
 import { Progress } from "@/components/Progress";
-import { TypebotLogoFull } from "@/components/TypebotLogo";
 import { registerUrl } from "@/constants";
 import marketingBotSrc from "./assets/marketing-bot.png";
 import marketingBuilderSrc from "./assets/marketing-builder.png";
@@ -15,41 +15,41 @@ import supportAndProductBuilderSrc from "./assets/support-builder.png";
 
 const useCases = [
   {
-    label: "Marketing",
+    label: "Generazione Lead",
     images: {
       builder: {
         src: marketingBuilderSrc,
-        alt: "An example of a marketing bot being built in Typebot",
+        alt: "Esempio di bot per la generazione lead creato con LeadBot",
       },
       bot: {
         src: marketingBotSrc,
-        alt: "A WhatsApp screenshot of a marketing bot",
+        alt: "Screenshot WhatsApp di un bot per il marketing",
       },
     },
   },
   {
-    label: "Support & Product",
+    label: "Supporto Clienti",
     images: {
       builder: {
         src: supportAndProductBuilderSrc,
-        alt: "An example of a support bot being built in Typebot",
+        alt: "Esempio di bot per il supporto clienti creato con LeadBot",
       },
       bot: {
         src: supportAndProductBotSrc,
-        alt: "A web widget screenshot of a support bot",
+        alt: "Screenshot di un widget web per il supporto",
       },
     },
   },
   {
-    label: "Sales",
+    label: "Vendita e Appuntamenti",
     images: {
       builder: {
         src: salesBuilderSrc,
-        alt: "An example of a sales bot being built in Typebot",
+        alt: "Esempio di bot per la vendita creato con LeadBot",
       },
       bot: {
         src: salesBotSrc,
-        alt: "A WhatsApp screenshot of a automated sales bot",
+        alt: "Screenshot WhatsApp di un bot per le vendite automatizzate",
       },
     },
   },
@@ -111,7 +111,7 @@ export const UseCases = ({ className }: { className?: string }) => {
       ref={containerRef}
     >
       <div className="flex flex-col items-center gap-20">
-        <TypebotLogoFull width="120px" />
+        <LeadBotLogoFull className="w-[120px]" />
         <Cta />
       </div>
       <div className="flex flex-col items-center gap-4 md:12">
@@ -206,21 +206,21 @@ const UsecaseTitle = ({
 export const Cta = () => (
   <div className="flex flex-col gap-6 items-center">
     <p className="text-balance max-w-4xl md:text-center text-lg">
-      Picture{" "}
+      Immagina{" "}
       <span className="font-medium">
-        a bot that goes beyond answering questions
+        un bot che va oltre il semplice rispondere alle domande
       </span>
-      : it builds relationships, shares content, sparks conversations, and
-      reflects your business's personality and values. With over 3 billion
-      people on messaging apps,{" "}
+      : crea relazioni, condivide contenuti, avvia conversazioni e riflette la
+      personalità e i valori del tuo studio o della tua agenzia. Con oltre 3
+      miliardi di persone sulle app di messaggistica,{" "}
       <span className="font-medium">
-        it's time to connect with your customers where they are
+        è il momento di connetterti con i tuoi clienti dove si trovano già
       </span>
       .
     </p>
     <div className="w-full md:w-auto flex flex-col md:flex-row gap-4">
       <CtaButtonLink size="lg" href={registerUrl}>
-        Get started free
+        Inizia gratis
       </CtaButtonLink>
     </div>
   </div>

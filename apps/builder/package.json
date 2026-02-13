@@ -1,5 +1,6 @@
 {
-  "name": "builder",
+  "name": "@leadbot/builder",
+  "description": "LeadBot visual flow builder - chatbot creation interface for professionals",
   "private": true,
   "engines": {
     "node": "22.x"

@@ -1,5 +1,5 @@
 {
-  "name": "root",
+  "name": "leadbot.it",
   "version": "3.15.2",
   "private": true,
   "workspaces": [
@@ -24,8 +24,9 @@
     "build-docker-compose-prod": "docker compose -f docker-compose.build.yml build",
     "start-docker-compose-prod": "docker compose -f docker-compose.yml up",
     "check-types": "turbo run check-types",
-    "build": "turbo run build --filter=builder... --filter=viewer... --filter=landing-page... --filter=docs...",
-    "dev": "turbo dev --filter=builder... --filter=viewer... --filter=@typebot.io/partykit... --filter=workflows... --concurrency=11",
+    "build": "turbo run build --filter=@leadbot/builder... --filter=viewer... --filter=landing-page... --filter=docs...",
+    "dev": "node scripts/dev.js",
+    "dev:windows": "turbo dev --filter=@leadbot/builder --filter=viewer --filter=landing-page --concurrency=5",
     "test": "turbo run test",
     "sync-locales": "dotenv -e .env -- tolgee sync --continue-on-warning --remove-unused --no-strict-namespace --patterns './apps/builder/src/**/*.ts?(x)' --backup './.tolgee/backup'",
     "pull-locales": "dotenv -e .env -- tolgee pull && bun format-and-lint:fix",

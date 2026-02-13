@@ -14,7 +14,7 @@ import { Marquee } from "./Marquee";
 export const Companies = () => (
   <div className="flex w-full flex-col gap-6 md:gap-12 items-center">
     <h2 className=" px-4 font-medium max-w-6xl">
-      Trusted by 650+ companies worldwide
+      Scelto da oltre 650 aziende in tutto il mondo
     </h2>
     <div className="relative isolate flex w-full justify-center">
       <Marquee>

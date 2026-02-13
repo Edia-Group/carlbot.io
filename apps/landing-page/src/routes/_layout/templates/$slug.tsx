@@ -27,7 +27,7 @@ export const Route = createFileRoute("/_layout/templates/$slug")({
   head: ({ loaderData }) => ({
     meta: loaderData
       ? createMetaTags({
-          title: `${getTemplateTitle(loaderData.template)} | Typebot`,
+          title: `${getTemplateTitle(loaderData.template)} | Leadbot`,
           description: loaderData.template.summary,
           imagePath: "/images/default-og.png",
           path: `/templates/${loaderData.template.slug}`,
@@ -75,7 +75,7 @@ function RouteComponent() {
               </h1>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <span>By</span>
-                <span className="font-medium text-foreground">Typebot</span>
+                <span className="font-medium text-foreground">Leadbot</span>
               </div>
             </div>
           </div>
@@ -175,7 +175,7 @@ const createTemplateStructuredData = (template: Template, slug: string) => {
     inLanguage: "en",
     publisher: {
       "@type": "Organization",
-      name: "Typebot",
+      name: "Leadbot",
       url: currentBaseUrl,
     },
     about: template.useCase,

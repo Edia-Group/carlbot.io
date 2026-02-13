@@ -5,9 +5,20 @@
 
 @plugin "@tailwindcss/typography";
 
+/* LeadBot Color Palette */
+:root {
+  --leadbot-primary: #1e40af;
+  --leadbot-secondary: #3b82f6;
+  --leadbot-accent: #93c5fd;
+  --leadbot-neutral: #f1f5f9;
+  --leadbot-text: #1e293b;
+  --leadbot-text-light: #64748b;
+}
+
 @layer base {
   body {
-    @apply text-foreground bg-[#F1F1F1];
+    @apply text-foreground bg-[#F1F5F9];
+    color: var(--leadbot-text);
   }
 
   section,
@@ -16,19 +27,30 @@
   }
 
   section:not(.dark) {
-    @apply bg-[#F1F1F1];
+    @apply bg-[#F1F5F9];
   }
 
   h1 {
     @apply text-4xl md:text-6xl font-bold;
+    color: var(--leadbot-primary);
+  }
+
+  .dark h1 {
+    color: var(--leadbot-accent);
+  }
+
+  .dark .text-foreground\/60 {
+    color: var(--color-stone-300);
   }
 
   h2 {
     @apply text-4xl;
+    color: var(--leadbot-primary);
   }
 
   h3 {
     @apply text-2xl;
+    color: var(--leadbot-primary);
   }
 
   h1,
@@ -38,6 +60,14 @@
   h5,
   h6 {
     @apply font-display font-medium;
+  }
+
+  a {
+    color: var(--leadbot-secondary);
+  }
+
+  a:hover {
+    color: var(--leadbot-primary);
   }
 }
 
@@ -89,16 +119,53 @@
     height: 200%;
     background: conic-gradient(
       from 179.91deg at 50% 50%,
-      #ff5924 -72.48deg,
-      #ffd79a 44.64deg,
-      #8f00ff 145.15deg,
-      #ff5924 287.52deg,
-      #ffd79a 404.64deg
+      #1e40af -72.48deg,
+      #3b82f6 44.64deg,
+      #93c5fd 145.15deg,
+      #1e40af 287.52deg,
+      #3b82f6 404.64deg
     );
     opacity: 0.4;
     mix-blend-mode: plus-lighter;
     filter: blur(295px);
   }
+}
+
+/* LeadBot Utility Classes */
+@utility text-leadbot-primary {
+  color: var(--leadbot-primary);
+}
+
+@utility text-leadbot-secondary {
+  color: var(--leadbot-secondary);
+}
+
+@utility text-leadbot-accent {
+  color: var(--leadbot-accent);
+}
+
+@utility bg-leadbot-primary {
+  background-color: var(--leadbot-primary);
+}
+
+@utility bg-leadbot-secondary {
+  background-color: var(--leadbot-secondary);
+}
+
+@utility bg-leadbot-accent {
+  background-color: var(--leadbot-accent);
+}
+
+@utility bg-leadbot-neutral {
+  background-color: var(--leadbot-neutral);
+}
+
+@utility border-leadbot-primary {
+  border-color: var(--leadbot-primary);
+}
+
+@utility border-leadbot-secondary {
+  border-color: var(--leadbot-secondary);
 }
 
 details > summary {

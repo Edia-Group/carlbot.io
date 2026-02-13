@@ -12,52 +12,52 @@ import nicolaiSrc from "../testimonials/assets/nicolai.jpg";
 const stats = [
   {
     stat: "2M+",
-    label: "monthly chats",
+    label: "chat mensili",
   },
   {
     stat: "1.5M+",
-    label: "bots published",
+    label: "bot pubblicati",
   },
   {
-    stat: "3,000+",
-    label: "members on Discord",
+    stat: "3.000+",
+    label: "membri su Discord",
   },
 ];
 
 const avatars = [
   {
     src: abhaySrc,
-    alt: "Community member 1 avatar",
+    alt: "Avatar membro community 1",
     position: "top-1 left-36",
   },
   {
     src: laszloSrc,
-    alt: "Community member 2 avatar",
+    alt: "Avatar membro community 2",
     position: "top-32 left-4 delay-500",
   },
   {
     src: joshuaSrc,
-    alt: "Community member 3 avatar",
+    alt: "Avatar membro community 3",
     position: "bottom-8 left-24 delay-300",
   },
   {
     src: lucasSrc,
-    alt: "Community member 4 avatar",
+    alt: "Avatar membro community 4",
     position: "-bottom-7 -left-7 delay-700",
   },
   {
     src: kurniaSrc,
-    alt: "Community member 5 avatar",
+    alt: "Avatar membro community 5",
     position: "top-1 right-36 delay-1000",
   },
   {
     src: nicolaiSrc,
-    alt: "Community member 6 avatar",
+    alt: "Avatar membro community 6",
     position: "top-28 right-4 delay-500",
   },
   {
     src: barrettaSrc,
-    alt: "Community member 7 avatar",
+    alt: "Avatar membro community 7",
     position: "bottom-12 right-32 delay-300",
   },
 ];
@@ -69,19 +69,19 @@ export const JoinTheCommunity = () => (
       <div className="flex flex-col gap-12 md:items-center max-w-4xl">
         <div className="flex flex-col gap-6 text-balance md:text-center">
           <h2 className="text-gray-12">
-            Together, we&apos;re hacking the future of
+            Insieme, stiamo scrivendo il futuro delle
             <br className="hidden md:block" />
-            conversational AI apps
+            app di IA conversazionale
           </h2>
           <p className="text-gray-11">
-            Join the Typebot community to connect with chatbot enthusiasts,
-            share insights, and learn together to create advanced automations.
-            Get exclusive resources, influence product development, and be part
-            of a network that's shaping the future of conversational apps.
+            Unisciti alla community di LeadBot per connetterti con altri
+            esperti, condividere idee e imparare a creare automazioni avanzate.
+            Ottieni risorse esclusive e partecipa alla crescita della rete che
+            sta plasmando il futuro della messaggistica aziendale.
           </p>
         </div>
         <CtaButtonLink size="lg" href={discordUrl} target="_blank">
-          Join the community
+          Unisciti alla community
         </CtaButtonLink>
       </div>
     </div>

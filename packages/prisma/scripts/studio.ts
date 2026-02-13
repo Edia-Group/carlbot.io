@@ -1,3 +1,3 @@
 import { executePrismaCommand } from "./executeCommand";
 
-executePrismaCommand("BROWSER=none prisma studio");
+executePrismaCommand("prisma studio");

@@ -1,58 +1,36 @@
+import { LeadBotLogoFull } from "@/components/LeadBotLogo";
 import { TextLink } from "@/components/link";
-import { TypebotLogoFull } from "@/components/TypebotLogo";
-import {
-  blueskyUrl,
-  discordUrl,
-  docsUrl,
-  githubRepoUrl,
-  linkedInUrl,
-} from "../../constants";
+import { docsUrl, githubRepoUrl, linkedInUrl } from "../../constants";
 import gradientSeparatorSrc from "./assets/gradient-separator.png";
 
 const data = [
   {
-    title: "Product",
+    title: "Prodotto",
     links: [
       {
-        label: "Documentation",
+        label: "Documentazione",
         href: docsUrl,
       },
       {
-        label: "Pricing",
+        label: "Prezzi",
         to: "/pricing",
+      },
+      {
+        label: "Template",
+        to: "/templates",
       },
     ],
   },
   {
-    title: "Community",
+    title: "Risorse",
     links: [
-      {
-        label: "Discord",
-        href: discordUrl,
-      },
       {
         label: "Blog",
         to: "/blog",
       },
       {
-        label: "Templates",
-        to: "/templates",
-      },
-      {
-        label: "GitHub",
-        href: githubRepoUrl,
-      },
-      {
-        label: "Bluesky",
-        href: blueskyUrl,
-      },
-      {
         label: "LinkedIn",
         href: linkedInUrl,
-      },
-      {
-        label: "OSS Friends",
-        to: "/oss-friends",
       },
     ],
   },
@@ -60,35 +38,35 @@ const data = [
     title: "Blog",
     links: [
       {
-        label: "Lead Generation Chatbot",
+        label: "Chatbot per Generazione Lead",
         to: "/blog/$slug",
         params: {
           slug: "lead-generation-chatbot",
         },
       },
       {
-        label: "Best Chatbot Builder",
+        label: "Miglior Chatbot Builder",
         to: "/blog/$slug",
         params: {
           slug: "best-chatbot-builder",
         },
       },
       {
-        label: "Create WhatsApp Chatbot",
+        label: "Creare Chatbot WhatsApp",
         to: "/blog/$slug",
         params: {
           slug: "create-whatsapp-chatbot",
         },
       },
       {
-        label: "FAQ Chatbot",
+        label: "Chatbot per FAQ",
         to: "/blog/$slug",
         params: {
           slug: "faq-chatbot",
         },
       },
       {
-        label: "Landbot Alternative",
+        label: "Alternativa a Landbot",
         to: "/blog/$slug",
         params: {
           slug: "landbot-alternative",
@@ -97,14 +75,14 @@ const data = [
     ],
   },
   {
-    title: "Company",
+    title: "Azienda",
     links: [
       {
-        label: "About",
+        label: "Chi siamo",
         to: "/about",
       },
       {
-        label: "Terms of Service",
+        label: "Termini di Servizio",
         to: "/$slug",
         params: {
           slug: "terms-of-service",
@@ -134,7 +112,7 @@ export const Footer = () => {
       <img src={gradientSeparatorSrc} alt="separator" className="w-full h-2" />
       <div className="flex flex-col max-w-7xl mx-auto px-6 md:px-4 w-full">
         <div className="flex flex-col md:flex-row gap-12 py-12 items-start">
-          <TypebotLogoFull className="mt-1" />
+          <LeadBotLogoFull className="mt-1" />
           <div className="flex flex-col md:flex-row gap-8 md:justify-around w-full">
             {data.map((item) => (
               <div className="flex flex-col gap-3" key={item.title}>
@@ -160,7 +138,7 @@ export const Footer = () => {
           </div>
         </div>
         <p className="text-foreground/70 text-sm">
-          All rights reserved 2025 - Typebot
+          Tutti i diritti riservati 2026 - Leadbot.it
         </p>
       </div>
     </footer>

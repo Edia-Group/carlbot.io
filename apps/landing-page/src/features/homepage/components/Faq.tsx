@@ -5,97 +5,87 @@ import { cn } from "@typebot.io/ui/lib/cn";
 import { motion } from "motion/react";
 import { type ReactNode, useState } from "react";
 import { TextLink } from "@/components/link";
-import { discordUrl, docsUrl } from "../../../constants";
+import { docsUrl } from "../../../constants";
 
 const data = [
   {
     title:
-      "What are the pricing plans, and what features are included in the free plan?",
+      "Quali sono i piani tariffari e quali funzionalità sono incluse nel piano gratuito?",
     content: (
       <>
-        Typebot offers flexible pricing plans to suit solo business owners,
-        startups, and large companies. The{" "}
-        <span className="font-bold">Free</span> plan includes unlimited
-        typebots, 200 chats per month, native integrations, webhooks, custom
-        Javascript & CSS, and community support. <br />
-        <br /> For more details on our Starter and Pro plans, check out the{" "}
-        <TextLink to="/pricing">Pricing Page</TextLink>.
+        LeadBot offre piani tariffari flessibili per adattarsi a liberi
+        professionisti, startup e grandi aziende. Il piano{" "}
+        <span className="font-bold">Gratuito</span> include LeadBot illimitati,
+        200 chat al mese, integrazioni native, webhook, Javascript e CSS
+        personalizzati. <br />
+        <br /> Per maggiori dettagli sui nostri piani Starter e Pro, consulta la{" "}
+        <TextLink to="/pricing">Pagina dei Prezzi</TextLink>.
       </>
     ),
   },
   {
     title:
-      "How easy is it to integrate Typebot with my existing systems and platforms?",
+      "Quanto è facile integrare LeadBot con i miei sistemi e piattaforme esistenti?",
     content: (
       <>
-        Integrating Typebot with your existing systems and platforms is
-        straightforward. We provide clear, step-by-step instructions to guide
-        you through the process. Typebot supports a wide range of platforms,
-        including WhatsApp, WordPress, Shopify, FlutterFlow, React, Next.js,
-        Notion, Webflow, Framer, and many more.
+        Integrare LeadBot con i tuoi sistemi è semplicissimo. Forniamo
+        istruzioni chiare passo-passo per guidarti nel processo. LeadBot
+        supporta una vasta gamma di piattaforme, tra cui WhatsApp Business
+        (fondamentale per il mercato italiano), WordPress, Shopify, Notion,
+        Webflow e molte altre.
       </>
     ),
   },
   {
     title:
-      "What kind of AI and machine learning capabilities does Typebot offer?",
+      "Che tipo di funzionalità di Intelligenza Artificiale offre LeadBot?",
     content: (
       <>
-        Typebot is AI provider agnostic, giving you the flexibility to connect
-        with any AI provider of your choice. Unlike competitors that lock you
-        into proprietary systems, Typebot provides the building blocks to
-        integrate seamlessly with your preferred AI services. You maintain full
-        control over the data you inject into the AI and the associated costs.
+        LeadBot è agnostico rispetto ai fornitori di IA, offrendoti la
+        flessibilità di connetterti con qualsiasi provider (come OpenAI o
+        Mistral). A differenza dei concorrenti che ti vincolano a sistemi
+        proprietari, LeadBot ti dà gli strumenti per integrare i servizi IA che
+        preferisci, mantenendo il pieno controllo sui dati e sui costi.
       </>
     ),
   },
   {
     title:
-      "What kind of support and resources are available if I encounter issues or need help?",
+      "Che tipo di supporto e risorse sono disponibili se ho bisogno di aiuto?",
     content: (
       <>
-        If you encounter any issues or need assistance, Typebot offers several
-        support and resource options:
+        Se riscontri problemi o hai bisogno di assistenza, LeadBot offre diverse
+        opzioni:
         <ol className="list-decimal list-inside flex flex-col gap-6 py-6">
           <li>
             <TextLink href={docsUrl} target="_blank">
-              Documentation
+              Documentazione
             </TextLink>
-            : Our comprehensive documentation is regularly updated to cover all
-            possible issues and questions. Use the search bar to quickly find
-            the information you need.
+            : La nostra documentazione completa è aggiornata regolarmente per
+            coprire ogni possibile dubbio. Usa la barra di ricerca per trovare
+            rapidamente le informazioni.
           </li>
           <li>
-            <TextLink href={discordUrl} target="_blank">
-              Discord Community
-            </TextLink>
-            : Join our Discord community and ask for help or report bugs in the
-            #help-and-questions channel. We strive to answer all questions
-            daily, and you might find that someone else has already asked the
-            same question. Use the search bar to find existing answers.
-          </li>
-          <li>
-            <span className="font-bold">Direct Support for Subscribers</span>:
-            Users on the Starter or Pro plans can reach out directly through the
-            chat widget located in the bottom right corner of the app for
-            priority support.
+            <span className="font-bold">Supporto Diretto per Abbonati</span>:
+            Gli utenti dei piani Starter o Pro possono scriverci direttamente
+            tramite il widget di chat all'interno dell'app per ricevere supporto
+            prioritario.
           </li>
         </ol>
       </>
     ),
   },
   {
-    title: "How secure is Typebot, and how do you handle data privacy?",
+    title: "Quanto è sicuro LeadBot e come gestite la privacy dei dati?",
     content: (
       <p>
-        Typebot is ISO 27001 certified, demonstrating our commitment to
-        maintaining the highest standards of information security management.
-        Our guiding principle is to collect only what we need to provide the
-        best service to you. We use a select number of trusted external service
-        providers for certain service offerings.
+        LeadBot è certificato ISO 27001, a dimostrazione del nostro impegno nel
+        mantenere i più alti standard di sicurezza delle informazioni. Il nostro
+        principio guida è raccogliere solo i dati necessari per fornirti il
+        miglior servizio, nel pieno rispetto del GDPR.
         <br />
         <br />
-        For detailed information, please refer to our{" "}
+        Per informazioni dettagliate, consulta la nostra{" "}
         <TextLink to="/$slug" params={{ slug: "privacy-policy" }}>
           privacy policy
         </TextLink>

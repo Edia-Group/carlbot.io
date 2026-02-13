@@ -1,0 +1,276 @@
+{
+  "version": "6.1",
+  "id": "accountant-onboarding-template-id",
+  "name": "Commercialista",
+  "events": [
+    {
+      "id": "start-event",
+      "outgoingEdgeId": "edge-start-to-welcome",
+      "graphCoordinates": { "x": 0, "y": 0 },
+      "type": "start"
+    }
+  ],
+  "groups": [
+    {
+      "id": "group-welcome",
+      "title": "Benvenuto",
+      "graphCoordinates": { "x": 1, "y": 150 },
+      "blocks": [
+        {
+          "id": "block-welcome-text",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  { "text": "Benvenuto nel portale di " },
+                  { "bold": true, "text": "Consulenza Fiscale" },
+                  { "text": ". 📊" }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  { "text": "Semplifichiamo la gestione della tua attività." }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "block-welcome-button",
+          "outgoingEdgeId": "edge-welcome-to-name",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "item-start",
+              "content": "Richiedi Info"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "group-name",
+      "title": "Nome",
+      "graphCoordinates": { "x": 350, "y": 150 },
+      "blocks": [
+        {
+          "id": "block-name-text",
+          "type": "text",
+          "content": {
+            "richText": [
+              { "type": "p", "children": [{ "text": "Come ti chiami?" }] }
+            ]
+          }
+        },
+        {
+          "id": "block-name-input",
+          "outgoingEdgeId": "edge-name-to-email",
+          "type": "text input",
+          "options": {
+            "variableId": "var-name"
+          }
+        }
+      ]
+    },
+    {
+      "id": "group-email",
+      "title": "Email",
+      "graphCoordinates": { "x": 700, "y": 150 },
+      "blocks": [
+        {
+          "id": "block-email-text",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Piacere, {{Nome}}! Qual è la tua email aziendale?"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "block-email-input",
+          "outgoingEdgeId": "edge-email-to-entity",
+          "type": "email input",
+          "options": {
+            "variableId": "var-email"
+          }
+        }
+      ]
+    },
+    {
+      "id": "group-entity",
+      "title": "Entità",
+      "graphCoordinates": { "x": 1050, "y": 150 },
+      "blocks": [
+        {
+          "id": "block-entity-text",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [{ "text": "Che tipo di attività gestisci?" }]
+              }
+            ]
+          }
+        },
+        {
+          "id": "block-entity-input",
+          "outgoingEdgeId": "edge-entity-to-revenue",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "item-freelance",
+              "content": "Libero Professionista / P.IVA"
+            },
+            {
+              "id": "item-company",
+              "content": "Ditta Individuale / Società"
+            },
+            {
+              "id": "item-startup",
+              "content": "Nuova Startup"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "group-revenue",
+      "title": "Fatturato",
+      "graphCoordinates": { "x": 1400, "y": 150 },
+      "blocks": [
+        {
+          "id": "block-revenue-text",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  { "text": "Qual è il tuo fatturato annuo stimato?" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "block-revenue-input",
+          "outgoingEdgeId": "edge-revenue-to-bye",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "rev-low",
+              "content": "Sotto i 30k"
+            },
+            {
+              "id": "rev-mid",
+              "content": "30k - 100k"
+            },
+            {
+              "id": "rev-high",
+              "content": "Oltre 100k"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "group-bye",
+      "title": "Conclusione",
+      "graphCoordinates": { "x": 1750, "y": 150 },
+      "blocks": [
+        {
+          "id": "block-bye-text-1",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Ottimo, {{Nome}}! Abbiamo tutto quello che ci serve per una prima analisi."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "block-bye-text-2",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Ti invieremo un preventivo personalizzato via email a breve. A presto!"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-start-to-welcome",
+      "from": { "eventId": "start-event" },
+      "to": { "groupId": "group-welcome" }
+    },
+    {
+      "id": "edge-welcome-to-name",
+      "from": { "blockId": "block-welcome-button" },
+      "to": { "groupId": "group-name" }
+    },
+    {
+      "id": "edge-name-to-email",
+      "from": { "blockId": "block-name-input" },
+      "to": { "groupId": "group-email" }
+    },
+    {
+      "id": "edge-email-to-entity",
+      "from": { "blockId": "block-email-input" },
+      "to": { "groupId": "group-entity" }
+    },
+    {
+      "id": "edge-entity-to-revenue",
+      "from": { "blockId": "block-entity-input" },
+      "to": { "groupId": "group-revenue" }
+    },
+    {
+      "id": "edge-revenue-to-bye",
+      "from": { "blockId": "block-revenue-input" },
+      "to": { "groupId": "group-bye" }
+    }
+  ],
+  "variables": [
+    {
+      "id": "var-name",
+      "name": "Nome",
+      "isSessionVariable": true
+    },
+    {
+      "id": "var-email",
+      "name": "Email",
+      "isSessionVariable": true
+    }
+  ],
+  "theme": {},
+  "createdAt": "2026-02-13T10:00:00.000Z",
+  "updatedAt": "2026-02-13T10:00:00.000Z",
+  "icon": "📊",
+  "workspaceId": "proWorkspace"
+}

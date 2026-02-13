@@ -72,3 +72,4 @@ opensrc/sources.json
 .workflow
 
 .ralph-tui/iterations
+.aider*

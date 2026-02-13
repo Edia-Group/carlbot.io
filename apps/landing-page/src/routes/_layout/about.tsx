@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ContentPageWrapper } from "@/components/ContentPageWrapper";
-import { WhyTypebotCta } from "@/components/cta/WhyTypebotCta";
+import { WhyLeadBotCta } from "@/components/cta/WhyLeadbotCta";
 import { BuildingsGradientIcon } from "@/features/about/BuildingsGradientIcon";
 import { HeartGradientIcon } from "@/features/about/HeartGradientIcon";
 import { MessageSquareGradientIcon } from "@/features/about/MessageSquareGradientIcon";
@@ -10,9 +10,9 @@ import { createMetaTags } from "@/lib/createMetaTags";
 export const Route = createFileRoute("/_layout/about")({
   head: () => ({
     meta: createMetaTags({
-      title: "About | Typebot",
+      title: "Chi Siamo | LeadBot",
       description:
-        "Typebot empowers businesses to craft personalized, interactive experiences that foster deeper connections with users.",
+        "LeadBot aiuta professionisti e agenzie italiane a generare più lead qualificati e automatizzare la gestione appuntamenti con chatbot intelligenti.",
       imagePath: "/images/default-og.png",
       path: "/about",
     }),
@@ -24,58 +24,58 @@ function RouteComponent() {
   return (
     <ContentPageWrapper>
       <div className="max-w-3xl mx-auto gap-16 flex flex-col">
-        <h1>Nice conversations makes good relations</h1>
+        <h1>Buone conversazioni, buoni rapporti</h1>
         <div className="flex flex-col gap-10 font-display text-3xl md:text-justify">
           <p>
-            At Typebot, we believe that{" "}
+            Noi di LeadBot crediamo che{" "}
             <span className="group font-medium bg-clip-text text-transparent bg-linear-to-r from-[#c13eaa] to-[#ff491f] to-30%">
               <MessageSquareGradientIcon className="size-6 inline-flex group-hover:motion-preset-seesaw-lg" />{" "}
-              great conversations
+              ottime conversazioni
             </span>{" "}
-            build strong relationships.
+            costruiscano relazioni solide.
           </p>
           <p>
-            Every day, people chat with friends, colleagues, and family on
-            messaging apps because it's natural, engaging, and familiar. <br />
-            We think businesses should tap into this same dynamic because where{" "}
+            Ogni giorno, le persone chattano con amici, colleghi e familiari su
+            WhatsApp perché è naturale e immediato. <br />I professionisti
+            dovrebbero sfruttare questa stessa dinamica: dove{" "}
             <span className="group font-medium bg-clip-text text-transparent bg-linear-to-r from-[#c13eaa] to-[#ff491f] to-20%">
               <HeartGradientIcon className="size-6 inline-flex group-hover:motion-preset-pulse-lg" />{" "}
-              people love to chat
+              le persone chattano
             </span>
-            , conversion rates rise.
+            , i tassi di conversione crescono.
           </p>
           <p>
-            Most chatbots today are limited to basic customer support, but we
-            know they can be so much more. We see chatbots as tools for{" "}
+            Molti chatbot oggi si limitano al supporto base, ma sappiamo che
+            possono fare molto di più. Li vediamo come strumenti per{" "}
             <span className="group font-medium bg-clip-text text-transparent bg-linear-to-r from-[#c13eaa] to-[#ff491f] to-50%">
               <ZapGradientIcon className="size-6 inline-flex group-hover:motion-preset-oscillate-lg" />{" "}
-              meaningful interactions
+              interazioni significative
             </span>{" "}
-            that go beyond scripted responses. Our mission is to transform cold,
-            transactional chats into lively conversations that reflect the true
-            voice of your brand.
+            che vanno oltre le risposte scriptate. La nostra missione è
+            trasformare chat fredde in conversazioni coinvolgenti per il tuo
+            brand.
           </p>
           <p>
-            Typebot{" "}
+            LeadBot{" "}
             <span className="group font-medium bg-clip-text text-transparent bg-linear-to-r from-[#c13eaa] to-[#ff491f] to-70%">
               <BuildingsGradientIcon className="size-6 inline-flex group-hover:motion-preset-bounce" />{" "}
-              empowers businesses
+              aiuta professionisti
             </span>{" "}
-            to craft personalized, interactive experiences that foster deeper
-            connections with users.
+            a creare esperienze personalizzate che generano connessioni più
+            profonde.
           </p>
           <p>
-            I'm Baptiste, a software engineer passionate about user experience
-            and design.
+            Siamo un team italiano appassionato di user experience e
+            automazione.
           </p>
           <p className="font-bold">
-            That's why I created Typebot—to unlock the full potential of
-            chatbots and make them intuitive, beautiful, and impactful.
+            Abbiamo creato LeadBot per sbloccare il potenziale dei chatbot e
+            renderli intuitivi, efficaci e pensati per il mercato italiano.
           </p>
-          <p>Let's bot!</p>
+          <p>Inizia a convertire!</p>
         </div>
       </div>
-      <WhyTypebotCta />
+      <WhyLeadBotCta />
     </ContentPageWrapper>
   );
 }

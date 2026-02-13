@@ -1,0 +1,315 @@
+{
+  "version": "6.1",
+  "id": "immobiliare-template-id",
+  "name": "Agenzia Immobiliare",
+  "events": [
+    {
+      "id": "start-event",
+      "outgoingEdgeId": "edge-start-to-welcome",
+      "graphCoordinates": { "x": 0, "y": 0 },
+      "type": "start"
+    }
+  ],
+  "groups": [
+    {
+      "id": "group-welcome",
+      "title": "Benvenuto",
+      "graphCoordinates": { "x": 1, "y": 150 },
+      "blocks": [
+        {
+          "id": "block-welcome-text",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  { "text": "Benvenuto in " },
+                  { "bold": true, "text": "LeadBot Immobiliare" },
+                  { "text": "! 🏠" }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Ti aiuteremo a trovare la casa dei tuoi sogni in pochi passi."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "block-welcome-button",
+          "outgoingEdgeId": "edge-welcome-to-name",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "item-start",
+              "content": "Iniziamo!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "group-name",
+      "title": "Nome",
+      "graphCoordinates": { "x": 350, "y": 150 },
+      "blocks": [
+        {
+          "id": "block-name-text",
+          "type": "text",
+          "content": {
+            "richText": [
+              { "type": "p", "children": [{ "text": "Come ti chiami?" }] }
+            ]
+          }
+        },
+        {
+          "id": "block-name-input",
+          "outgoingEdgeId": "edge-name-to-email",
+          "type": "text input",
+          "options": {
+            "variableId": "var-name"
+          }
+        }
+      ]
+    },
+    {
+      "id": "group-email",
+      "title": "Email",
+      "graphCoordinates": { "x": 700, "y": 150 },
+      "blocks": [
+        {
+          "id": "block-email-text",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Piacere di conoscerti, {{Nome}}! Qual è la tua migliore email?"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "block-email-input",
+          "outgoingEdgeId": "edge-email-to-interest",
+          "type": "email input",
+          "options": {
+            "variableId": "var-email"
+          }
+        }
+      ]
+    },
+    {
+      "id": "group-interest",
+      "title": "Interesse",
+      "graphCoordinates": { "x": 1050, "y": 150 },
+      "blocks": [
+        {
+          "id": "block-interest-text",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [{ "text": "Cosa stai cercando esattamente?" }]
+              }
+            ]
+          }
+        },
+        {
+          "id": "block-interest-input",
+          "outgoingEdgeId": "edge-interest-to-type",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "item-buy",
+              "content": "Voglio Comprare"
+            },
+            {
+              "id": "item-rent",
+              "content": "Cerco in Affitto"
+            },
+            {
+              "id": "item-sell",
+              "content": "Voglio Vendere"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "group-type",
+      "title": "Tipologia",
+      "graphCoordinates": { "x": 1400, "y": 150 },
+      "blocks": [
+        {
+          "id": "block-type-text",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  { "text": "A quale tipologia di immobile sei interessato?" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "block-type-input",
+          "outgoingEdgeId": "edge-type-to-budget",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "item-apt",
+              "content": "Appartamento"
+            },
+            {
+              "id": "item-villa",
+              "content": "Villa / Casa Indipendente"
+            },
+            {
+              "id": "item-comm",
+              "content": "Ufficio / Commerciale"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "group-budget",
+      "title": "Budget",
+      "graphCoordinates": { "x": 1750, "y": 150 },
+      "blocks": [
+        {
+          "id": "block-budget-text",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [{ "text": "Qual è il tuo budget massimo?" }]
+              }
+            ]
+          }
+        },
+        {
+          "id": "block-budget-input",
+          "outgoingEdgeId": "edge-budget-to-bye",
+          "type": "text input",
+          "options": {
+            "variableId": "var-budget"
+          }
+        }
+      ]
+    },
+    {
+      "id": "group-bye",
+      "title": "Conclusione",
+      "graphCoordinates": { "x": 2100, "y": 150 },
+      "blocks": [
+        {
+          "id": "block-bye-text-1",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Grazie {{Nome}}! Abbiamo ricevuto la tua richiesta."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "block-bye-text-2",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Un nostro consulente ti contatterà al più presto all'indirizzo {{Email}}."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-start-to-welcome",
+      "from": { "eventId": "start-event" },
+      "to": { "groupId": "group-welcome" }
+    },
+    {
+      "id": "edge-welcome-to-name",
+      "from": { "blockId": "block-welcome-button" },
+      "to": { "groupId": "group-name" }
+    },
+    {
+      "id": "edge-name-to-email",
+      "from": { "blockId": "block-name-input" },
+      "to": { "groupId": "group-email" }
+    },
+    {
+      "id": "edge-email-to-interest",
+      "from": { "blockId": "block-email-input" },
+      "to": { "groupId": "group-interest" }
+    },
+    {
+      "id": "edge-interest-to-type",
+      "from": { "blockId": "block-interest-input" },
+      "to": { "groupId": "group-type" }
+    },
+    {
+      "id": "edge-type-to-budget",
+      "from": { "blockId": "block-type-input" },
+      "to": { "groupId": "group-budget" }
+    },
+    {
+      "id": "edge-budget-to-bye",
+      "from": { "blockId": "block-budget-input" },
+      "to": { "groupId": "group-bye" }
+    }
+  ],
+  "variables": [
+    {
+      "id": "var-name",
+      "name": "Nome",
+      "isSessionVariable": true
+    },
+    {
+      "id": "var-email",
+      "name": "Email",
+      "isSessionVariable": true
+    },
+    {
+      "id": "var-budget",
+      "name": "Budget",
+      "isSessionVariable": true
+    }
+  ],
+  "theme": {},
+  "createdAt": "2026-02-13T10:00:00.000Z",
+  "updatedAt": "2026-02-13T10:00:00.000Z",
+  "icon": "🏠",
+  "workspaceId": "proWorkspace"
+}

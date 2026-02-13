@@ -1,7 +1,7 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { cn } from "@typebot.io/ui/lib/cn";
+import { LeadBotLogoFull } from "@/components/LeadBotLogo";
 import { ButtonLink } from "@/components/link";
-import { TypebotLogoFull } from "@/components/TypebotLogo";
 import { dashboardUrl } from "@/constants";
 import { useIsAuthenticated } from "@/hooks/useIsAuthenticated";
 
@@ -21,11 +21,11 @@ export const TopBar = ({ className }: Props) => {
       )}
     >
       <Link to="/">
-        <TypebotLogoFull />
+        <LeadBotLogoFull />
       </Link>
       {pathname === "/" && isAuthenticated && (
         <ButtonLink href={dashboardUrl} variant="outline">
-          Go to dashboard
+          Vai alla dashboard
         </ButtonLink>
       )}
     </div>

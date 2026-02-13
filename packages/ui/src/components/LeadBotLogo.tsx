@@ -1,20 +1,20 @@
 import type React from "react";
 
-export const TypebotLogo = (props: React.SVGProps<SVGSVGElement>) => (
+export const LeadBotLogo = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
-    viewBox="0 0 40 40"
+    viewBox="0 0 100 100"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <rect width="40" height="40" rx="8" fill="#0042DA" />
+    <rect width="100" height="100" rx="20" fill="#0042DA" />
     <text
       x="50%"
-      y="55%"
+      y="50%"
       dominantBaseline="middle"
       textAnchor="middle"
       fill="white"
-      fontSize="16"
+      fontSize="40"
       fontWeight="bold"
       fontFamily="Arial, sans-serif"
     >

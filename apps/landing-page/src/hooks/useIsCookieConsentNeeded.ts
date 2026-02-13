@@ -10,10 +10,10 @@ export const useCookieConsentStatus = () => {
 
   useEffect(() => {
     if (document.location.origin === "http://localhost:3003") return;
-    const typebotCookie = getTypebotCookie(document.cookie);
-    if (typebotCookie) {
+    const LeadbotCookie = getTypebotCookie(document.cookie);
+    if (LeadbotCookie) {
       setCookieConsentStatus(
-        typebotCookie.consent === "declined" ? "declined" : "accepted",
+        LeadbotCookie.consent === "declined" ? "declined" : "accepted",
       );
       return;
     }

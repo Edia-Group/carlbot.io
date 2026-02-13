@@ -28,7 +28,7 @@ export const FreePlanCard = ({ children }: { children?: React.ReactNode }) => (
 
 export const FreePlanPerksList = () => (
   <ul className="flex flex-col gap-3">
-    <PerkListItem>Unlimited typebots</PerkListItem>
+    <PerkListItem>Unlimited Leadbots</PerkListItem>
     <PerkListItem>
       <span>
         <span className="font-bold">

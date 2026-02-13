@@ -1,13 +1,13 @@
 export const PricingHeading = () => (
   <div className="flex flex-col gap-8 items-start">
-    <h1>Flexible plans that scale with you</h1>
+    <h1>Piani flessibili che crescono con te</h1>
     <p className="max-w-2xl">
-      Whether you're a{" "}
-      <span className="text-primary font-bold">solo business owner</span>, a{" "}
-      <span className="text-violet-500 font-bold">growing startup</span> or a{" "}
-      <span className="font-bold">large company</span>, Typebot is here to help
-      you build high-performing chat forms for the right price. Pay for as
-      little or as much usage as you need.
+      Che tu sia un{" "}
+      <span className="text-primary font-bold">professionista</span>, una{" "}
+      <span className="text-violet-500 font-bold">startup in crescita</span> o{" "}
+      <span className="font-bold">un'agenzia</span>, Leadbot è qui per aiutarti
+      a creare chatbot ad alte prestazioni al giusto prezzo. Paga solo per
+      quello che usi.
     </p>
   </div>
 );

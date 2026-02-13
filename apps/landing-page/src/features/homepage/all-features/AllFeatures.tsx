@@ -27,42 +27,44 @@ const bgImageSrcs = [
 const cards = [
   {
     Icon: CodeIcon,
-    title: "Hidden fields",
+    title: "Campi nascosti",
     description:
-      "Include data in your form URL to segment your user and use its data directly in your form.",
+      "Includi dati nell'URL del tuo modulo per segmentare gli utenti e utilizzarli direttamente nel flow.",
     rotateCoeff: -10,
   },
   {
     Icon: UsersIcon,
-    title: "Team collaboration",
+    title: "Collaborazione",
     description:
-      "Sharing is caring: invite your teammates to work on your typebots with you",
+      "Lavora in team: invita i tuoi collaboratori a creare e gestire i LeadBot insieme a te.",
     rotateCoeff: 12,
   },
   {
     Icon: Link02Icon,
-    title: "Link to sub typebots",
+    title: "Sotto-bot collegati",
     description:
-      "For the in-depth analytics lovers who want to see flow with drop-off rate etc.",
+      "Per chi ama le analisi approfondite e vuole vedere i tassi di completamento di flussi complessi.",
     rotateCoeff: -7,
   },
   {
     Icon: DocumentCodeIcon,
-    title: "Custom code",
-    description: "Customize everything with your own Javascript & CSS Code",
+    title: "Codice personalizzato",
+    description:
+      "Personalizza ogni dettaglio con il tuo codice Javascript e CSS.",
     rotateCoeff: -2,
   },
   {
     Icon: ZapIcon,
-    title: "Custom domain",
-    description: "Connect your typebot to the custom URL of your choice",
+    title: "Dominio personalizzato",
+    description:
+      "Collega il tuo LeadBot all'URL personalizzato che preferisci.",
     rotateCoeff: 2,
   },
   {
     Icon: DatabaseIcon,
-    title: "Integration platforms",
+    title: "Integrazioni avanzate",
     description:
-      "HTTP requests, OpenAI, Google Sheets, Google Analytics, Meta Pixel, and a lot more",
+      "Richieste HTTP, OpenAI, Google Sheets, Google Analytics, Meta Pixel e molto altro.",
     rotateCoeff: -4,
   },
 ] as const;
@@ -93,14 +95,14 @@ export const AllFeatures = () => {
       <div className="md:overflow-visible flex flex-col items-center md:h-all-features-sticky-container">
         <div className="md:sticky flex flex-col md:justify-between items-center max-w-xl shrink-0 top-(--padding-top) md:h-(--header-height) gap-6 md:gap-0">
           <h2 className="px-4 text-center">
-            All the features you need to hack bots building
+            Tutte le funzionalità che ti servono per scalare
           </h2>
           <CtaButtonLink
             size="lg"
             className="hidden md:inline-flex"
             href={registerUrl}
           >
-            Create a bot for free
+            Crea un bot gratis
           </CtaButtonLink>
         </div>
 
@@ -138,7 +140,7 @@ export const AllFeatures = () => {
       </div>
       <div className="md:hidden px-4">
         <CtaButtonLink size="lg" href={registerUrl}>
-          Create a bot for free
+          Crea un bot gratis
         </CtaButtonLink>
       </div>
     </div>

@@ -9,35 +9,35 @@ const instructions = [
   {
     image: {
       src: signUpButtonSrc,
-      alt: "A button in the center with label 'Sign up'",
+      alt: "Un pulsante al centro con l'etichetta 'Iscriviti'",
     },
     title: "Step 1",
     description:
-      "Create your account and choose your plan—you can sign up for a risk-free trial",
+      "Crea il tuo account e scegli il tuo piano: puoi iniziare con una prova gratuita senza rischi",
   },
   {
     image: {
       src: editorMockupSrc,
-      alt: "A mockup of a chatbot editor interface",
+      alt: "Un mockup dell'interfaccia dell'editor di chatbot",
     },
     title: "Step 2",
-    description: "Pick a template from our library or start from scratch.",
+    description: "Scegli un template dalla nostra libreria o inizia da zero.",
   },
   {
     image: {
       src: publishClickSrc,
-      alt: "A mouse over a 'Publish' button",
+      alt: "Un mouse sopra il pulsante 'Pubblica'",
     },
     title: "Step 3",
     description:
-      "Build and test your chat in real-time. Ready to launch? Just click publish!",
+      "Costruisci e testa il tuo bot in tempo reale. Sei pronto? Clicca su pubblica!",
   },
 ];
 
 export const GetStarted = () => {
   return (
     <div className="flex flex-col gap-8">
-      <h2>Get started with Typebot</h2>
+      <h2>Inizia subito con LeadBot</h2>
       <div className="flex flex-col md:flex-row max-w-7xl gap-2">
         {instructions.map((instruction) => (
           <InstructionCard

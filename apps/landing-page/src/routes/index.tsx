@@ -4,7 +4,6 @@ import { Section } from "@/components/Section";
 import { AllFeatures } from "@/features/homepage/all-features/AllFeatures";
 import { Companies } from "@/features/homepage/companies/components/Companies";
 import { Faq } from "@/features/homepage/components/Faq";
-import { JoinTheCommunity } from "@/features/homepage/components/JoinTheCommunity";
 import { MadeForDevelopers } from "@/features/homepage/components/MadeForDevelopers";
 import { ForEveryDepartment } from "@/features/homepage/departments/ForEveryDepartment";
 import { GetStarted } from "@/features/homepage/get-started/GetStarted";
@@ -18,9 +17,9 @@ import { createMetaTags } from "@/lib/createMetaTags";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: createMetaTags({
-      title: "Typebot",
+      title: "Leadbot.it",
       description:
-        "Typebot is a no-code platform that enables you to effortlessly create and integrate advanced chatbots into websites and chat platforms like WhatsApp.",
+        "Leadbot.it è una piattaforma no-code che ti permette di creare e integrare facilmente chatbot avanzati in siti web e piattaforme di chat come WhatsApp.",
       imagePath: "/images/default-og.png",
       path: "",
     }),
@@ -49,7 +48,6 @@ function Home() {
         </Section>
         <Section>
           <MadeForDevelopers />
-          <JoinTheCommunity />
           <ProductPrinciples />
         </Section>
         <Section className="dark md:py-0 px-0 md:px-0 gap-0">

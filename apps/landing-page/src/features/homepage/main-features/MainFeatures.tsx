@@ -63,14 +63,14 @@ const BottomConnector = ({ className }: SVGProps<SVGSVGElement>) => (
 const features = [
   {
     title: {
-      main: "From block to bot",
-      sub: "create your custom chat experience",
+      main: "Dal lead all'appuntamento",
+      sub: "crea il tuo flow di qualificazione in pochi click",
     },
     description:
-      "Typebot's chat builder makes it easy to create advanced chat experiences with 45+ building blocks. Add text, images, videos, and use diverse input options such as text fields, buttons, date pickers, and payment inputs. Connect effortlessly with tools like OpenAI, Google Sheets, Zapier and customize every detail, from fonts and colors to shapes and shadows, with advanced theming and reusable templates.",
+      "Il builder visuale di LeadBot ti permette di creare chatbot avanzati per qualificare i tuoi lead senza scrivere codice. Raccogli dati importanti come budget, zona, tipologia di servizio e sincronizza automaticamente con Google Calendar, WhatsApp Business e i tuoi strumenti preferiti. Personalizza colori, font e stili per riflettere il tuo brand.",
     link: {
-      src: "https://docs.typebot.io/editor/blocks/integrations/google-sheets",
-      text: "View all integrations",
+      src: "https://docs.leadbot.it/editor/blocks/integrations/google-calendar",
+      text: "Vedi tutte le integrazioni",
     },
     video: {
       src: dragDropVideoSrc,
@@ -79,14 +79,14 @@ const features = [
   },
   {
     title: {
-      main: "One fits all",
-      sub: "deploy your bot seamlessly within your ecosystem",
+      main: "Un chatbot, tutti i canali",
+      sub: "distribuiscilo dove preferisci",
     },
     description:
-      "Typebot is the leading multichannel chat builder, allowing you to build your bot once and deploy it anywhere, via custom domains, embedded containers, popups, chat bubbles, or even on WhatsApp. You can also execute your bot using HTTP requests, making it easy to integrate with other services or use it in different programming languages.",
+      "LeadBot è pensato per il mercato italiano: distribuisci il tuo chatbot su WhatsApp Business (la app più usata in Italia), embed sul tuo sito web, o tramite dominio personalizzato. Un solo flow, molteplici punti di contatto con i tuoi clienti. Perfetto per agenzie immobiliari, studi legali, commercialisti e professionisti.",
     link: {
-      src: "https://docs.typebot.io/deploy/web/overview",
-      text: "Read docs",
+      src: "https://docs.leadbot.it/deploy/whatsapp/overview",
+      text: "Scopri di più",
     },
     video: {
       src: deployVideoSrc,
@@ -95,11 +95,11 @@ const features = [
   },
   {
     title: {
-      main: "More than just a bot",
-      sub: "analyze your performance and grow",
+      main: "Più di un semplice bot",
+      sub: "analizza e converti meglio",
     },
     description:
-      "Collect real-time results and leverage Typebot's powerful analytics to fuel growth. Access detailed metrics like drop-off and completion rates, and easily export your data to CSV for deeper analysis. Effortlessly gather key insights to enhance your customers' chat experience and optimize your strategy.",
+      "Raccogli i risultati in tempo reale e usa l'analytics di LeadBot per migliorare le conversioni. Monitora tassi di completamento, punti di abbandono ed esporta i dati in Excel per analisi approfondite. Ricevi notifiche istantanee quando un lead qualificato completa il flow e segui i tuoi clienti con i reminder automatici.",
     video: {
       src: realTimeResultVideoSrc,
     },

@@ -7,7 +7,7 @@ import type * as React from "react";
 import { Suspense } from "react";
 import { Cta } from "@/components/cta/Cta";
 import { TextLink } from "@/components/link";
-import { Typebot } from "@/components/Typebot";
+import { Leadbot } from "@/components/Typebot";
 import {
   Table,
   TableBody,
@@ -108,7 +108,7 @@ const components = {
   ),
   Cta: ({
     highlight,
-    buttonLabel = "Create a typebot",
+    buttonLabel = "Create a Leadbot",
     children,
   }: {
     highlight?: "default";
@@ -120,9 +120,9 @@ const components = {
       {children}
     </Cta>
   ),
-  Typebot: (props: any) => (
+  Leadbot: (props: any) => (
     <Suspense fallback={<div>Loading...</div>}>
-      <Typebot
+      <Leadbot
         style={{
           borderRadius: "0.375rem",
           borderWidth: "1px",

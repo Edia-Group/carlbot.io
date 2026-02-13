@@ -11,7 +11,7 @@ const getOrigin = () => {
 
 export const Seo = ({
   title,
-  description = "Create and publish conversational forms that collect 4 times more answers and feel native to your product",
+  description = "The chatbot builder for professionals and local agencies who want more appointments without wasting time on the phone.",
   imagePreviewUrl = `${getOrigin()}/images/og.png`,
 }: {
   title: string;
@@ -19,7 +19,7 @@ export const Seo = ({
   currentUrl?: string;
   imagePreviewUrl?: string;
 }) => {
-  const formattedTitle = `${title} | Typebot`;
+  const formattedTitle = `${title} | LeadBot`;
 
   return (
     <Head>

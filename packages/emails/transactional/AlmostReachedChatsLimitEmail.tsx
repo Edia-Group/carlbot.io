@@ -49,7 +49,7 @@ export const AlmostReachedChatsLimitEmail = ({
             Your progress can be monitored on your workspace dashboard settings.{" "}
             <br />
             <br />
-            Check out the <a href="https://typebot.io/pricing">pricing page</a>{" "}
+            Check out the <a href="https://leadbot.it/pricing">pricing page</a>{" "}
             for information about the pay as you go tiers.
             <br />
             <br />
@@ -57,7 +57,9 @@ export const AlmostReachedChatsLimitEmail = ({
           </Text>
 
           <Hr style={hr} />
-          <Text style={footerText}>Typebot - Build faster, Chat smarter</Text>
+          <Text style={footerText}>
+            LeadBot.io - Più clienti, meno telefonate
+          </Text>
         </Container>
       </Body>
     </Html>

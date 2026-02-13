@@ -1,0 +1,278 @@
+{
+  "version": "6.1",
+  "id": "legal-intake-template-id",
+  "name": "Studio Legale",
+  "events": [
+    {
+      "id": "start-event",
+      "outgoingEdgeId": "edge-start-to-welcome",
+      "graphCoordinates": { "x": 0, "y": 0 },
+      "type": "start"
+    }
+  ],
+  "groups": [
+    {
+      "id": "group-welcome",
+      "title": "Benvenuto",
+      "graphCoordinates": { "x": 1, "y": 150 },
+      "blocks": [
+        {
+          "id": "block-welcome-text",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  { "text": "Benvenuto nello " },
+                  { "bold": true, "text": "Studio Legale" },
+                  { "text": ". ⚖️" }
+                ]
+              },
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Siamo qui per assisterti con la massima professionalità."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "block-welcome-button",
+          "outgoingEdgeId": "edge-welcome-to-name",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "item-start",
+              "content": "Richiedi Assistenza"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "group-name",
+      "title": "Nome",
+      "graphCoordinates": { "x": 350, "y": 150 },
+      "blocks": [
+        {
+          "id": "block-name-text",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [{ "text": "Qual è il tuo nome completo?" }]
+              }
+            ]
+          }
+        },
+        {
+          "id": "block-name-input",
+          "outgoingEdgeId": "edge-name-to-email",
+          "type": "text input",
+          "options": {
+            "variableId": "var-name"
+          }
+        }
+      ]
+    },
+    {
+      "id": "group-email",
+      "title": "Email",
+      "graphCoordinates": { "x": 700, "y": 150 },
+      "blocks": [
+        {
+          "id": "block-email-text",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Grazie, {{Nome}}. Inserisci la tua email per essere ricontattato:"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "block-email-input",
+          "outgoingEdgeId": "edge-email-to-matter",
+          "type": "email input",
+          "options": {
+            "variableId": "var-email"
+          }
+        }
+      ]
+    },
+    {
+      "id": "group-matter",
+      "title": "Materia",
+      "graphCoordinates": { "x": 1050, "y": 150 },
+      "blocks": [
+        {
+          "id": "block-matter-text",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  { "text": "In quale ambito hai bisogno di assistenza?" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "block-matter-input",
+          "outgoingEdgeId": "edge-matter-to-desc",
+          "type": "choice input",
+          "items": [
+            {
+              "id": "item-civ",
+              "content": "Diritto Civile"
+            },
+            {
+              "id": "item-pen",
+              "content": "Diritto Penale"
+            },
+            {
+              "id": "item-lab",
+              "content": "Diritto del Lavoro"
+            },
+            {
+              "id": "item-other",
+              "content": "Altro"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "group-desc",
+      "title": "Descrizione",
+      "graphCoordinates": { "x": 1400, "y": 150 },
+      "blocks": [
+        {
+          "id": "block-desc-text",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  { "text": "Puoi descrivere brevemente il tuo caso?" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "block-desc-input",
+          "outgoingEdgeId": "edge-desc-to-bye",
+          "type": "text input",
+          "options": {
+            "isLong": true,
+            "variableId": "var-desc"
+          }
+        }
+      ]
+    },
+    {
+      "id": "group-bye",
+      "title": "Conclusione",
+      "graphCoordinates": { "x": 1750, "y": 150 },
+      "blocks": [
+        {
+          "id": "block-bye-text-1",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [{ "text": "Richiesta acquisita con successo." }]
+              }
+            ]
+          }
+        },
+        {
+          "id": "block-bye-text-2",
+          "type": "text",
+          "content": {
+            "richText": [
+              {
+                "type": "p",
+                "children": [
+                  {
+                    "text": "Il nostro team valuterà i dettagli e ti risponderà entro 24 ore lavorative. A presto!"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-start-to-welcome",
+      "from": { "eventId": "start-event" },
+      "to": { "groupId": "group-welcome" }
+    },
+    {
+      "id": "edge-welcome-to-name",
+      "from": { "blockId": "block-welcome-button" },
+      "to": { "groupId": "group-name" }
+    },
+    {
+      "id": "edge-name-to-email",
+      "from": { "blockId": "block-name-input" },
+      "to": { "groupId": "group-email" }
+    },
+    {
+      "id": "edge-email-to-matter",
+      "from": { "blockId": "block-email-input" },
+      "to": { "groupId": "group-matter" }
+    },
+    {
+      "id": "edge-matter-to-desc",
+      "from": { "blockId": "block-matter-input" },
+      "to": { "groupId": "group-desc" }
+    },
+    {
+      "id": "edge-desc-to-bye",
+      "from": { "blockId": "block-desc-input" },
+      "to": { "groupId": "group-bye" }
+    }
+  ],
+  "variables": [
+    {
+      "id": "var-name",
+      "name": "Nome",
+      "isSessionVariable": true
+    },
+    {
+      "id": "var-email",
+      "name": "Email",
+      "isSessionVariable": true
+    },
+    {
+      "id": "var-desc",
+      "name": "Caso",
+      "isSessionVariable": true
+    }
+  ],
+  "theme": {},
+  "createdAt": "2026-02-13T10:00:00.000Z",
+  "updatedAt": "2026-02-13T10:00:00.000Z",
+  "icon": "⚖️",
+  "workspaceId": "proWorkspace"
+}

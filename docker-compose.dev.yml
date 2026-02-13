@@ -1,5 +1,5 @@
 services:
-  typebot-db:
+  leadbot-db:
     image: postgres:16
     ports:
       - "5432:5432"
@@ -7,8 +7,8 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data
     environment:
-      POSTGRES_DB: "typebot"
-      POSTGRES_PASSWORD: "typebot"
+      POSTGRES_DB: "leadbot"
+      POSTGRES_PASSWORD: "leadbot"
   minio:
     image: minio/minio
     command: server /data --console-address ":9001"
@@ -29,7 +29,7 @@ services:
       /bin/sh -c "
       sleep 10;
       /usr/bin/mc alias set minio http://minio:9000 minio minio123;
-      /usr/bin/mc mb --ignore-existing minio/typebot;
+      /usr/bin/mc mb --ignore-existing minio/leadbot;
       /usr/bin/mc anonymous set public minio/typebot/public;
       exit 0;
       "

@@ -678,6 +678,110 @@ const templateDefinitions = [
     bestFor: ["E-commerce brands", "Subscription products", "Value pages"],
     collects: ["Current spend", "Usage frequency", "Contact info"],
   },
+  {
+    name: "Agenzia Immobiliare",
+    emoji: "🏠",
+    fileName: "immobiliare.json",
+    updatedAt: "2026-02-13",
+    category: "marketing",
+    useCase: "Lead Generation",
+    features: [],
+    isNew: true,
+    summary:
+      "Template per agenzie immobiliari per qualificare potenziali acquirenti o venditori.",
+    description:
+      "Ottieni lead qualificati per la tua agenzia immobiliare. Questo flow raccoglie preferenze, budget e tipologia di immobile desiderato, permettendo al tuo team di concentrarsi sui clienti più pronti all'acquisto.",
+    highlights: [
+      {
+        title: "Obiettivo",
+        description: "Qualificare lead immobiliari in modo automatico.",
+      },
+      {
+        title: "Flow",
+        description:
+          "Benvenuto, raccolta dati contatto, preferenze immobile, budget.",
+      },
+      {
+        title: "Risultato",
+        description: "Lead pronti per la visita o la consulenza.",
+      },
+    ],
+    bestFor: [
+      "Agenzie Immobiliari",
+      "Agenti indipendenti",
+      "Sviluppatori immobiliari",
+    ],
+    collects: [
+      "Nome",
+      "Email",
+      "Tipo interesse",
+      "Tipologia immobile",
+      "Budget",
+    ],
+  },
+  {
+    name: "Studio Legale",
+    emoji: "⚖️",
+    fileName: "legal-intake.json",
+    updatedAt: "2026-02-13",
+    category: "marketing",
+    useCase: "Lead Generation",
+    features: [],
+    isNew: true,
+    summary:
+      "Template per studi legali per l'acquisizione e il triage dei nuovi clienti.",
+    description:
+      "Gestisci le richieste di assistenza legale in modo professionale. Il chatbot raccoglie la materia di interesse e una breve descrizione del caso, facilitando la preparazione per la prima consulenza.",
+    highlights: [
+      {
+        title: "Obiettivo",
+        description: "Triage automatico dei nuovi casi legali.",
+      },
+      {
+        title: "Flow",
+        description:
+          "Accoglienza, raccolta dati, selezione materia, descrizione caso.",
+      },
+      {
+        title: "Risultato",
+        description: "Richieste organizzate per materia e urgenza.",
+      },
+    ],
+    bestFor: ["Avvocati", "Studi Legali associati", "Consulenti legali"],
+    collects: ["Nome", "Email", "Ambito legale", "Descrizione caso"],
+  },
+  {
+    name: "Commercialista",
+    emoji: "📊",
+    fileName: "accountant-onboarding.json",
+    updatedAt: "2026-02-13",
+    category: "marketing",
+    useCase: "Lead Generation",
+    features: [],
+    isNew: true,
+    summary:
+      "Template per studi commerciali e consulenti fiscali per l'onboarding di nuovi clienti.",
+    description:
+      "Semplifica la raccolta dati per i nuovi clienti del tuo studio commerciale. Identifica subito il tipo di attività e il volume d'affari per proporre il pacchetto di consulenza più adatto.",
+    highlights: [
+      {
+        title: "Obiettivo",
+        description: "Raccogliere dati preliminari per preventivi fiscali.",
+      },
+      {
+        title: "Flow",
+        description:
+          "Benvenuto, dati contatto, tipo attività, fatturato stimato.",
+      },
+      {
+        title: "Risultato",
+        description:
+          "Preventivi più accurati e meno tempo perso in raccolta dati.",
+      },
+    ],
+    bestFor: ["Commercialisti", "Consulenti del lavoro", "Centri CAF"],
+    collects: ["Nome", "Email", "Tipo entità", "Volume d'affari"],
+  },
 ] satisfies TemplateDefinition[];
 
 export const useCases: TemplateUseCase[] = [

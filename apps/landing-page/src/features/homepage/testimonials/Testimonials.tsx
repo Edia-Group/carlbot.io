@@ -1,4 +1,4 @@
-import { TypebotLogo } from "@/components/TypebotLogo";
+import { LeadBotLogo } from "@/components/LeadBotLogo";
 import abhayPictureSrc from "./assets/abhay.jpeg";
 import invictuzPictureSrc from "./assets/invictuz.png";
 import joshuaPictureSrc from "./assets/joshua.jpg";
@@ -28,7 +28,7 @@ const testimonials = [
         <br />
         <br />
         We are now working on personalizing the email templates based on the
-        answers (user industry and role) given in the typebot. We are big fan!
+        answers (user industry and role) given in the Leadbot. We are big fan!
       </>
     ),
   },
@@ -38,7 +38,7 @@ const testimonials = [
     provider: "email",
     content: (
       <>
-        I used Typebot at my company and was impressed with how it cut our
+        I used Leadbot at my company and was impressed with how it cut our
         customer service workload in half. I was able to create a fully
         functional chatbot in minutes. <br />
         <br /> You can create a bot to answer frequently asked questions about
@@ -54,7 +54,7 @@ const testimonials = [
     avatarSrc: kurniaPictureSrc,
     content: (
       <>
-        I have several chatbot builders, but Typebot is the one I use the most.
+        I have several chatbot builders, but Leadbot is the one I use the most.
         It is simple to construct and very intuitive. <br />
         Integration with third-party applications is simple, and you can create
         the most sophisticated bots with its simplicity.
@@ -68,7 +68,7 @@ const testimonials = [
     avatarSrc: laszloPictureSrc,
     content: (
       <>
-        Typebot is one of the best chatbot builders with its intelligent
+        Leadbot is one of the best chatbot builders with its intelligent
         features and drag-and-drop simplicity. Its UI/UX is an earthly
         paradise...
         <br />
@@ -83,7 +83,7 @@ const testimonials = [
     provider: "capterra",
     avatarSrc: oscarPictureSrc,
     content:
-      "Within 5 minutes of signing up you can already have your bot running thanks to the templates it comes with. I have used many tools to make bots but none as simple, easy and powerful as Typebot.",
+      "Within 5 minutes of signing up you can already have your bot running thanks to the templates it comes with. I have used many tools to make bots but none as simple, easy and powerful as Leadbot.",
   },
   {
     name: "Julien Muratot",
@@ -91,7 +91,7 @@ const testimonials = [
     avatarSrc: julienPictureSrc,
     provider: "email",
     content:
-      "I run Google ads all year long on our landing page that contains a typebot. I saw a 2x increase on our conversation rate compared to our old WordPress form.",
+      "I run Google ads all year long on our landing page that contains a Leadbot. I saw a 2x increase on our conversation rate compared to our old WordPress form.",
   },
   {
     name: "Joshua Lim",
@@ -99,7 +99,7 @@ const testimonials = [
     avatarSrc: joshuaPictureSrc,
     provider: "email",
     content:
-      "I upgraded my typeforms to typebots and saw a conversion rate increase from 14% to 43% on my marketing campaigns. I noticed the improvement on day one. That was a game-changer.",
+      "I upgraded my typeforms to Leadbots and saw a conversion rate increase from 14% to 43% on my marketing campaigns. I noticed the improvement on day one. That was a game-changer.",
   },
   {
     name: "Mario Barretta",
@@ -107,7 +107,7 @@ const testimonials = [
     provider: "email",
     content: (
       <>
-        Thanks to typebot I can finally make site forms much more modern and I
+        Thanks to Leadbot I can finally make site forms much more modern and I
         can collect information that I would have missed before. Also ,thanks to
         Baptiste, the service is always evolving and has excellent assistance
         not only in solving but also in listening to suggestions and putting it
@@ -125,11 +125,11 @@ const testimonials = [
     role: "Nocode expert and content creator",
     content: (
       <>
-        Amazing product! I&apos;m using Typebot for everything when it&apos;s
+        Amazing product! I&apos;m using Leadbot for everything when it&apos;s
         about talking with customers.
         <br />
         <br />
-        What&apos;s amazing with Typebot is that it makes a &quot;chat interface
+        What&apos;s amazing with Leadbot is that it makes a &quot;chat interface
         effect&quot; without the hassle of being behind my computer all day
         responding to customers. Highly recommend !
       </>
@@ -141,7 +141,7 @@ const testimonials = [
     avatarSrc: nicolaiPictureSrc,
     provider: "email",
     content:
-      "I am really loving using Typebot! So good. I have used all the top bots and yours is definitely the most user friendly, and yet still so powerful.",
+      "I am really loving using Leadbot! So good. I have used all the top bots and yours is definitely the most user friendly, and yet still so powerful.",
   },
   {
     name: "Lucas Barp",
@@ -224,7 +224,7 @@ const Testimonial = ({
           />
         ) : (
           <div className="dark rounded-full size-full flex items-center justify-center p-3">
-            <TypebotLogo />
+            <LeadBotLogo />
           </div>
         )}
       </div>

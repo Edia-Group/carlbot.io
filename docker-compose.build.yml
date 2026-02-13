@@ -1,24 +1,24 @@
 services:
-  typebot-db-docker:
+  leadbot-db-docker:
     image: postgres:16
     restart: always
     volumes:
-      - ${PWD}/.typebot-build/database:/var/lib/postgresql/data
+      - ${PWD}/.leadbot-build/database:/var/lib/postgresql/data
     environment:
-      - POSTGRES_DB=typebot
-      - POSTGRES_PASSWORD=typebot
+      - POSTGRES_DB=leadbot
+      - POSTGRES_PASSWORD=leadbot
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 5s
       timeout: 5s
       retries: 5
-  typebot-builder:
+  leadbot-builder:
     build:
       context: .
       args:
         - SCOPE=builder
     depends_on:
-      typebot-db-docker:
+      leadbot-db-docker:
         condition: service_healthy
     restart: always
     ports:
@@ -26,13 +26,13 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
     env_file: .env.docker
-  typebot-viewer:
+  leadbot-viewer:
     build:
       context: .
       args:
         - SCOPE=viewer
     depends_on:
-      typebot-db-docker:
+      leadbot-db-docker:
         condition: service_healthy
     restart: always
     ports:

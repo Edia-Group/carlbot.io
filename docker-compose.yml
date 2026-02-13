@@ -1,34 +1,34 @@
-x-typebot-common: &typebot-common
+x-leadbot-common: &leadbot-common
   restart: always
   depends_on:
-    typebot-redis:
+    leadbot-redis:
       condition: service_healthy
-    typebot-db:
+    leadbot-db:
       condition: service_healthy
   networks:
-    - typebot-network
+    - leadbot-network
   env_file: .env
   environment:
-    REDIS_URL: redis://typebot-redis:6379
+    REDIS_URL: redis://leadbot-redis:6379
 
 services:
-  typebot-db:
+  leadbot-db:
     image: postgres:16
     restart: always
     volumes:
       - db-data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_DB=typebot
-      - POSTGRES_PASSWORD=typebot
+      - POSTGRES_DB=leadbot
+      - POSTGRES_PASSWORD=leadbot
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 5s
       timeout: 5s
       retries: 5
     networks:
-      - typebot-network
+      - leadbot-network
 
-  typebot-redis:
+  leadbot-redis:
     image: redis:alpine
     restart: always
     command: --save 60 1 --loglevel warning
@@ -41,22 +41,23 @@ services:
     volumes:
       - redis-data:/data
     networks:
-      - typebot-network
+      - leadbot-network
 
-  typebot-builder:
-    <<: *typebot-common
+  # Using Typebot base images until LeadBot custom images are built
+  leadbot-builder:
+    <<: *leadbot-common
     image: baptistearno/typebot-builder:latest
     ports:
       - "8080:3000"
 
-  typebot-viewer:
-    <<: *typebot-common
+  leadbot-viewer:
+    <<: *leadbot-common
     image: baptistearno/typebot-viewer:latest
     ports:
       - "8081:3000"
 
 networks:
-  typebot-network:
+  leadbot-network:
     driver: bridge
 
 volumes:

@@ -1,108 +1,96 @@
 <br />
 <p align="center">
-<a href="https://typebot.io" target="_blank">
-  <img src="./.github/images/banner.png" alt="Typebot banner">
+<a href="https://leadbot.it" target="_blank">
+  <img src="./.github/images/banner.png" alt="LeadBot banner">
 </a>
 </p>
 <br />
 
 <p align="center">
-Typebot is a Fair Source chatbot builder. It allows you to create advanced chatbots visually, embed them anywhere on your web/mobile apps, and collect results in real-time
+LeadBot.io è la piattaforma di chatbot flow per professionisti e agenzie di servizi locali. Genera lead qualificati, fissa appuntamenti e gestisci follow-up automatici.
 </p>
 
 <p align="center">
-<a href="https://github.com/baptistearno/typebot.io/stargazers"><img src="https://img.shields.io/github/stars/baptistearno/typebot.io" alt="Github Stars"></a>
+<a href="https://github.com/filipporomani/leadbot/stargazers"><img src="https://img.shields.io/github/stars/filipporomani/leadbot" alt="Github Stars"></a>
 </a>
-<a href="https://github.com/baptistearno/typebot.io/pulse"><img src="https://img.shields.io/github/commit-activity/m/baptistearno/typebot.io" alt="Commits per month"></a>
-<a href="https://docs.typebot.io/self-hosting/guides/docker">
-<img src="https://img.shields.io/docker/pulls/baptistearno/typebot-builder">
-</a>
-<a href="https://github.com/baptistearno/typebot.io/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-AGPLv3-purple" alt="License">
-<a href="https://status.typebot.io"><img height="20px" src="https://betteruptime.com/status-badges/v1/monitor/a9kf.svg" alt="Uptime"></a>
-<a href="https://github.com/baptisteArno/typebot.io/issues/new?template=bug_report.md"><img src="https://img.shields.io/badge/Report a bug-Github-%231F80C0" alt="Report a bug"></a>
-<a href="https://typebot.io/discord"><img src="https://img.shields.io/badge/Join community-Discord-%23404EED" alt="Ask a question"></a>
-
+<a href="https://github.com/filipporomani/leadbot/pulse"><img src="https://img.shields.io/github/commit-activity/m/filipporomani/leadbot" alt="Commits per month"></a>
+<a href="https://leadbot.it"><img src="https://img.shields.io/badge/website-leadbot.it-blue" alt="Website"></a>
+<a href="https://github.com/filipporomani/leadbot/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-FSL--1.1--Apache--2.0-purple" alt="License">
+<a href="https://github.com/filipporomani/leadbot/issues/new?template=bug_report.md"><img src="https://img.shields.io/badge/Report a bug-Github-%231F80C0" alt="Report a bug"></a>
 </p>
 
 <h3 align="center">
-  <b><a href="https://app.typebot.io/register">Try Typebot</a></b>
+  <b><a href="https://leadbot.it">Prova LeadBot</a></b>
   •
-  <b><a href="https://docs.typebot.io/">Docs</a></b>
+  <b><a href="https://docs.leadbot.it">Docs</a></b>
 
 ---
 
 ## Builder demo
 
-https://user-images.githubusercontent.com/16015833/168876388-0310678d-080b-4eca-8633-e5cc4d7bd5d1.mp4
+*Demo video in aggiornamento*
 
 ## Features
 
-Typebot makes it easy to create advanced chatbots. It provides the building blocks that are adaptable to any business use case. I improve Typebot regularly with bug fixes, new features, and performance improvements.
+LeadBot.io è la piattaforma pensata per professionisti e agenzie di servizi locali che vogliono automatizzare la lead generation e la gestione appuntamenti.
 
-**Chat builder** with 34+ building blocks such as:
+**Chat builder** con 34+ blocchi:
 
-- 💬 Bubbles: Text, Image / GIF, video, audio, embed.
-- 🔤 Inputs: Text, email, phone number, buttons, picture choice, date picker, payment (Stripe), file picker...
-- 🧠 Logic: Conditional branching, URL redirections, scripting (Javascript), A/B testing.
-- 🔌 Integrations: Webhook / HTTP requests, OpenAI, Google Sheets, Google Analytics, Meta Pixel, Zapier, Make.com, Chatwoot, More to come...
+- 💬 Bubbles: Testo, Immagini/GIF, video, audio, embed
+- 🔤 Inputs: Testo, email, telefono, pulsanti, scelta immagini, date, pagamenti (Stripe), upload file...
+- 🧠 Logic: Branching condizionale, redirect URL, scripting (Javascript), A/B testing
+- 🔌 Integrazioni: Webhook, OpenAI, Google Sheets, Google Calendar, Meta Pixel, Zapier, Make.com, WhatsApp Business API
 
-**Theme** your chatbot to match your brand identity:
+**Temi personalizzabili**:
 
-- 🎨 Customize the fonts, background, colors, roundness, shadows, and more
-- 💪 Advanced theming with custom CSS
-- 💾 Reusable theme templates
+- 🎨 Font, colori, background, arrotondamenti, ombre
+- 💪 CSS custom per white-labeling
+- 💾 Template riutilizzabili
 
-**Share** your typebot anywhere:
+**Distribuzione multi-canale**:
 
-- 🔗 Custom domain
-- 👨‍💻 Embed as a container, popup, or chat bubble easily with the native JS library
-- ⚡ Blazing-fast embed lib. No iframe, no external dependencies, no performance impact
-- 💻 Executable with HTTP requests
+- 🔗 Dominio custom
+- 👨‍💻 Embed su sito (container, popup, bubble)
+- 💬 WhatsApp Business API nativo
+- ⚡ Libreria embed ultra-leggera, no iframe
 
-Collect your **Results** and get insights:
+**Analytics e Reportistica**:
 
-- 📊 In-depth analytics with drop-off rates, completion rates, and more
-- 📥 Export results to CSV
+- 📊 Drop-off rates, completion rates
+- 📥 Export CSV risultati
+- 🔔 Report lead giornalieri
 
-Built for **developers**:
+**Per sviluppatori**:
 
-- 🔓 No vendor-locking. Features built with flexibility in mind.
-- 💻 Easy-to-use [APIs](https://docs.typebot.io/api-reference).
+- 🔓 No vendor-locking
+- 💻 API REST complete
+- 🏗️ Architettura extensible con Turborepo
 
-## Getting started with Typebot
+## Inizia con LeadBot
 
-The easiest way to get started with Typebot is with [the official managed service in the Cloud](https://app.typebot.io). You'll have high availability, backups, security, and maintenance all managed for you by me, [Baptiste, Typebot's founder](https://twitter.com/baptisteArno).
+Il modo più semplice per iniziare è registrarsi su [leadbot.it](https://leadbot.it). Otterrai un'infrastruttura pronta all'uso con alta affidabilità, backup e manutenzione inclusi.
 
-The cloud version can save a substantial amount of developer time and resources. For most sites, this ends up being the best value option and the revenue goes to funding the maintenance and further development of Typebot.
-So you’ll be supporting Fair Source software and getting a great service! 💙
+La versione cloud ti permette di risparmiare tempo prezioso e risorse di sviluppo, offrendo la migliore esperienza per scalare la tua lead generation in modo professionale.
 
-## Support & Community
+## Supporto
 
-You'll find a lot of resources to help you get started with Typebot in the [documentation](https://docs.typebot.io/).
-
-- Have a question? Join the [Discord server](https://typebot.io/discord) and get instant help.
-- Found a bug? [Create an issue](https://github.com/baptisteArno/typebot.io/issues/new)
+- Documentazione: [docs.leadbot.it](https://docs.leadbot.it)
+- Bug report: [GitHub Issues](https://github.com/filipporomani/leadbot/issues)
 
 ## Self-hosting
 
-Interested in self-hosting Typebot on your server? Take a look at the [self-hosting installation instructions](https://docs.typebot.io/self-hosting/get-started).
+Per installare LeadBot sul proprio server, consultare le [istruzioni di self-hosting](https://docs.leadbot.it/self-hosting/get-started).
 
-## How to Contribute
+## Sviluppo locale
 
-You are awesome, let's build great software together. Head over to the [Contribute docs](https://docs.typebot.io/contribute/overview) to get started. 💪
-
-## Run the project locally
-
-Follow the [Local installation](https://docs.typebot.io/contribute/guides/local-installation) section of in the Contributing docs.
-
-### Top contributors
-
-<a href="https://github.com/baptistearno/typebot.io/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=baptistearno/typebot.io" />
-</a>
-
-Made with [contrib.rocks](https://contrib.rocks).
+Seguire la sezione [Local installation](https://docs.leadbot.it/contribute/guides/local-installation) nella documentazione.
 
 ## License
 
-Typebot's code is protected under a Functional Source License. You will find more information about the license and how to comply with it [here](https://docs.typebot.io/self-hosting#license-requirements).
+LeadBot è basato su Typebot ed è protetto da Functional Source License (FSL-1.1-Apache-2.0). Maggiori informazioni nella sezione [licenza](https://docs.leadbot.it/self-hosting#license-requirements).
+
+---
+
+<p align="center">
+  <sub>Built with ❤️ for Italian professionals · Forked from Typebot</sub>
+</p>

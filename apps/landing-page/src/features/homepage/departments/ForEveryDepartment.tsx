@@ -15,68 +15,68 @@ import type { DepartmentCardData } from "./types";
 const departments = [
   {
     title: "Marketing",
-    sub: "Let your bot drive the conversation and turn leads into customers.",
+    sub: "Lascia che il tuo bot guidi la conversazione e trasformi i visitatori in clienti.",
     bulletPoints: [
       {
         main: "Lead scoring",
-        sub: "Typebot asks questions while automatically scoring and prioritizing new leads.",
+        sub: "LeadBot pone domande qualificanti assegnando automaticamente una priorità ai nuovi lead.",
       },
       {
-        main: "Insights",
-        sub: "Engaging quizzes will help you collect visitor emails and provide valuable insights on their needs.",
+        main: "Insight",
+        sub: "Quiz coinvolgenti ti aiuteranno a raccogliere email e ottenere informazioni preziose sulle necessità dei clienti.",
       },
       {
         main: "Lead magnet",
-        sub: "Provide access to valuable content in return for email addresses.",
+        sub: "Offri contenuti di valore in cambio dei dati di contatto per far crescere il tuo database.",
       },
     ],
     image: {
       src: marketingSrc,
-      alt: "marketing illustration",
+      alt: "illustrazione marketing",
     },
   },
   {
-    title: "Support & Product",
-    sub: "Deliver 24/7 multichannel support and make your customers happy.",
+    title: "Supporto e Servizio",
+    sub: "Fornisci supporto multicanale 24/7 e rendi felici i tuoi clienti.",
     bulletPoints: [
       {
-        main: "Customer support",
-        sub: "Qualify user requests and redirect them to the right resources.",
+        main: "Supporto clienti",
+        sub: "Qualifica le richieste degli utenti e indirizzale verso le risorse giuste o l'operatore corretto.",
       },
       {
-        main: "NPS Survey",
-        sub: "Easily collect user feedback on your product.",
+        main: "Sondaggi NPS",
+        sub: "Raccogli facilmente feedback sulla soddisfazione per migliorare i tuoi servizi.",
       },
       {
-        main: "Customer onboarding",
-        sub: "Your bot starts engaging immediately after registration to qualify new customers.",
+        main: "Onboarding clienti",
+        sub: "Il tuo bot interagisce immediatamente dopo il primo contatto per guidare i nuovi clienti.",
       },
     ],
     image: {
       src: productSrc,
-      alt: "Product illustration",
+      alt: "illustrazione prodotto",
     },
   },
   {
-    title: "Sales",
-    sub: "Boost meetings and show rates with highly interested leads",
+    title: "Vendite",
+    sub: "Aumenta gli appuntamenti e il tasso di conversione con lead altamente interessati.",
     bulletPoints: [
       {
-        main: "Prospect qualification",
-        sub: "Your bot scores leads based on your sales criteria and addresses FAQs 24/7.",
+        main: "Qualificazione prospect",
+        sub: "Il tuo bot valuta i lead in base ai tuoi criteri di vendita e risponde alle FAQ 24 ore su 24.",
       },
       {
-        main: "Meetings",
-        sub: "Automate appointment scheduling to simplify the process for customers.",
+        main: "Appuntamenti",
+        sub: "Automatizza la prenotazione di consulenze o visite immobiliari per semplificare la vita ai tuoi clienti.",
       },
       {
-        main: "Lead nurturing",
-        sub: "Send instant follow-ups and other communications to keep leads engaged until they’re ready to purchase.",
+        main: "Nurturing dei lead",
+        sub: "Invia follow-up istantanei e comunicazioni automatiche per mantenere i lead caldi fino alla vendita.",
       },
     ],
     image: {
       src: salesSrc,
-      alt: "sales illustration",
+      alt: "illustrazione vendite",
     },
   },
 ] as const satisfies DepartmentCardData[];
@@ -95,9 +95,10 @@ export const ForEveryDepartment = () => {
     <>
       <div className="w-full gap-12 flex flex-col max-w-7xl">
         <div className="flex flex-col gap-4">
-          <h2>Designed for every department</h2>
+          <h2>Progettato per ogni esigenza</h2>
           <p className="text-gray-11 font-normal">
-            Automate conversations throughout the entire customer journey.
+            Automatizza le conversazioni durante l'intero percorso del tuo
+            cliente.
           </p>
         </div>
         <div className="flex isolate flex-col gap-4 md:gap-6 md:flex-row">
